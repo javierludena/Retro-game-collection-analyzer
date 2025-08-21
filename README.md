@@ -4,11 +4,11 @@
 
 A web app that analyzes your retro video game collection using AI and provides expert recommendations on what to sell, keep, or buy - all with a touch of Spanish gaming community humor.
 
-## 🚀 Features
+## ⚡ Features
 
 - **📁 Multiple Input Methods**: Upload Excel/CSV files or manually enter your collection
 - **🤖 AI-Powered Analysis**: Uses Google Gemini 2.5 Flash for intelligent recommendations  
-- **🎯 Spanish Market Focus**: Prices and trends specific to the Spanish/European market
+- **💎 Spanish Market Focus**: Prices and trends specific to the Spanish/European market
 - **😄 Gamberro Humor**: Terms like "cutrefacto", "chinoso y plasticoso", and "punto limpio"
 - **📊 Detailed Analytics**: Collection value, platform distribution, investment strategies
 - **🎨 Dark Theme UI**: Modern responsive design with CSS custom properties
@@ -21,7 +21,7 @@ A web app that analyzes your retro video game collection using AI and provides e
 - **Styling**: Custom CSS with CSS variables
 - **Bundler**: Vite
 
-## 🏃‍♂️ Quick Start
+## 🎮 Quick Start
 
 ### Prerequisites
 - Node.js (v16 or higher)
@@ -63,7 +63,7 @@ A web app that analyzes your retro video game collection using AI and provides e
 3. **Get Analysis**: AI provides recommendations on selling, keeping, or buying
 4. **Enjoy the Humor**: Experience collection analysis with Spanish gaming community flair
 
-## 🎯 Example Data Format
+## 📀 Example Data Format
 
 ```csv
 Title,Platform,Genre,Year,Purchase Price,Condition,Rarity

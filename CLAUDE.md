@@ -76,6 +76,14 @@ Uses simple vanilla JavaScript state management:
 - Error handling includes user-friendly Spanish messages
 - All monetary values displayed in Euros with proper formatting
 
+## Writing Style Guidelines
+
+When creating or updating documentation:
+- Avoid AI-looking emojis like 🚀 (rocket) and 🎯 (target/bullseye)
+- Use more natural emojis that fit the gaming/collecting theme: 🎮 🕹️ 📀 💿 🎲 ⚡ 🔥 💎 ⭐
+- Keep language conversational and authentic, not corporate or AI-generated sounding
+- Match the humor and tone of the Spanish retro gaming community
+
 ## API Integration
 
 The Gemini integration uses structured generation with JSON schema validation to ensure consistent response format. Key configuration:

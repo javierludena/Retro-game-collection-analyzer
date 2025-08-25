@@ -71,9 +71,13 @@ Uses simple vanilla JavaScript state management:
 
 - The app uses ES modules with Vite's import resolution
 - External dependencies loaded via CDN (XLSX) and ES module imports (@google/genai)
-- No build-time linting or testing scripts configured - manual code review recommended
+- **Data Processing**: Robust CSV→JSON conversion with intelligent column mapping
+- **Validation**: Complete file, data type, and structure validation
+- **Error Handling**: Specialized error classes (FileError, ValidationError, APIError)
+- **AI Integration**: Optimized prompt for collector-focused analysis with market data
+- **UX**: Progressive loading with randomized gaming-themed status messages
+- **Security**: File size limits (5MB), MIME type validation, data sanitization
 - Responsive design with CSS Grid and Flexbox
-- Error handling includes user-friendly Spanish messages
 - All monetary values displayed in Euros with proper formatting
 
 ## Writing Style Guidelines
@@ -87,7 +91,20 @@ When creating or updating documentation:
 ## API Integration
 
 The Gemini integration uses structured generation with JSON schema validation to ensure consistent response format. Key configuration:
-- Model: `gemini-2.5-flash`
-- Response format: `application/json`
-- Schema enforcement for reliable data structure
+- Model: `gemini-2.5-flash` (optimized for speed and JSON compliance)
+- Response format: `application/json` with strict schema enforcement
+- **Collector-focused prompts**: Long-term investment perspective, historical significance, iconic games
+- **Market data integration**: Uses PriceLoose, PriceCIB, PriceNew from CSV for accurate recommendations
+- **Strategic analysis**: Loose→CIB conversion recommendations, genre-based predictions
 - Spanish language prompts and error messages
+- API key validation with connection testing
+
+## Next Features (Sprint 2)
+
+### eBay API Integration 🔥
+- **Auto-search functionality**: For "BUY" recommendations, automatically search eBay for listings below target price
+- **Direct links**: Convert recommendations into actionable purchase opportunities
+- **Condition filtering**: Match CIB, Loose, New conditions from analysis
+- **Price alerts**: Notify when deals appear below recommended buy price
+
+This will be the first retro gaming collection analyzer that directly connects analysis to real market opportunities.

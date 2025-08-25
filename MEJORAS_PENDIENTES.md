@@ -1,38 +1,37 @@
 # Mejoras Pendientes - ¿Tienes colección?
 
-## 🚨 Problemas Críticos Identificados
+## ✅ Problemas Críticos RESUELTOS
 
-### 1. **Backend - Procesamiento de Datos**
-- **Problema**: Se envía CSV crudo a la IA causando carga infinita
-- **Solución**: Convertir Excel/CSV a JSON estructurado antes de enviar
-- **Impacto**: Alto - La app no funciona correctamente
-- **Prioridad**: CRÍTICA
+### 1. **Backend - Procesamiento de Datos** ✅
+- **Estado**: COMPLETADO
+- **Solución implementada**: CSV → JSON estructurado con mapeo inteligente de columnas
+- **Mejoras**: Soporte para múltiples formatos de columna, precios de mercado incluidos
 
-### 2. **Validación de Datos**
-- **Problema**: No hay validación de formato de archivos Excel/CSV
-- **Solución**: Validar columnas esperadas, tipos de datos y estructura
-- **Impacto**: Alto - Errores silenciosos con archivos malformados
-- **Prioridad**: CRÍTICA
+### 2. **Validación de Datos** ✅
+- **Estado**: COMPLETADO  
+- **Solución implementada**: Validación completa de estructura, tipos y campos requeridos
+- **Mejoras**: Mensajes específicos por fila/columna, validación de rangos
 
-### 3. **Manejo de Errores**
-- **Problema**: Errores genéricos, no específicos para cada tipo de fallo
-- **Solución**: Mensajes de error específicos (archivo corrupto, columnas faltantes, etc.)
-- **Impacto**: Medio - UX pobre cuando algo falla
-- **Prioridad**: ALTA
+### 3. **Manejo de Errores** ✅
+- **Estado**: COMPLETADO
+- **Solución implementada**: Clases especializadas (FileError, ValidationError, APIError)
+- **Mejoras**: Mensajes específicos y contextuales
 
 ## 🔧 Mejoras Técnicas
 
-### 4. **Optimización del Prompt AI**
-- **Estado**: Implementado parcialmente
-- **Pendiente**: Ajustar según respuestas reales de Gemini
-- **Impacto**: Medio - Calidad de las recomendaciones
-- **Prioridad**: MEDIA
+### 4. **Optimización del Prompt AI** ✅
+- **Estado**: COMPLETADO
+- **Mejoras implementadas**: 
+  - Perspectiva coleccionista a largo plazo
+  - Factores de revalorización (géneros, temática oscura, pre-2010)
+  - Estrategia Loose→CIB para completar colecciones
+  - Reconocimiento de juegos icónicos y packs legendarios
+  - Criterios específicos por tipo de recomendación
 
-### 5. **Gestión de API Key**
-- **Problema**: No hay validación de API key ni manejo de límites
-- **Solución**: Validar key al inicio, mostrar errores de quota/permisos
-- **Impacto**: Alto - La app falla sin feedback claro
-- **Prioridad**: ALTA
+### 5. **Gestión de API Key** ✅
+- **Estado**: COMPLETADO
+- **Solución implementada**: Validación previa con request de prueba
+- **Mejoras**: Detección específica de errores de cuota, permisos y conectividad
 
 ### 6. **Performance Frontend**
 - **Problema**: Archivos grandes pueden bloquear la UI
@@ -42,13 +41,13 @@
 
 ## 🎨 Mejoras de UX/UI
 
-### 7. **Feedback Visual**
-- **Estado**: Básico implementado
-- **Mejoras**: 
-  - Progreso más granular
-  - Animaciones de carga
-  - Estados de error más claros
-- **Prioridad**: BAJA
+### 7. **Feedback Visual** ✅
+- **Estado**: COMPLETADO
+- **Mejoras implementadas**: 
+  - Progreso granular y predecible (no más saltos)
+  - 20 mensajes aleatorios de carga estilo "incubating retro wisdom..."
+  - Progresión natural 30% → 65% → 75% → 90% → 100%
+  - Estados de error específicos con validaciones
 
 ### 8. **Responsividad**
 - **Problema**: No testado en móviles
@@ -60,6 +59,29 @@
 - **Problema**: No hay validación del formato CSV manual
 - **Solución**: Validar formato, mostrar vista previa
 - **Impacto**: Medio - UX de entrada manual
+- **Prioridad**: MEDIA
+
+## 🚀 PRÓXIMAS FUNCIONALIDADES
+
+### 18. **Integración eBay API** 🔥
+- **Funcionalidad**: Para juegos recomendados "COMPRAR", buscar en eBay anuncios por debajo del precio objetivo
+- **Implementación**: 
+  - API eBay Finding para búsquedas automáticas
+  - Filtros por condición (CIB, Loose, New)  
+  - Enlaces directos a ofertas encontradas
+  - Alertas de precio en tiempo real
+- **Impacto**: ALTO - Funcionalidad única que convierte recomendaciones en acción
+- **Prioridad**: CRÍTICA PRÓXIMA
+
+### 19. **Sistema de Alertas**
+- **Funcionalidad**: Notificaciones cuando aparezcan ofertas debajo del precio objetivo
+- **Implementación**: Web Push notifications, email opcional
+- **Impacto**: Alto - Valor añadido para coleccionistas activos
+- **Prioridad**: ALTA
+
+### 20. **Marketplace Comparador**
+- **Funcionalidad**: Comparar precios entre eBay, Amazon, retro stores
+- **Impacto**: Alto - Visión completa del mercado
 - **Prioridad**: MEDIA
 
 ## 📊 Mejoras de Funcionalidad
@@ -81,17 +103,15 @@
 
 ## 🔒 Mejoras de Seguridad
 
-### 13. **Validación de Archivos**
-- **Problema**: No hay límites de tamaño ni validación de tipo
-- **Solución**: Limitar tamaño, validar extensiones reales
-- **Impacto**: Alto - Prevenir abuso
-- **Prioridad**: ALTA
+### 13. **Validación de Archivos** ✅
+- **Estado**: COMPLETADO
+- **Solución implementada**: Límite 5MB, validación extensiones y tipos MIME
+- **Mejoras**: Detección de archivos corruptos
 
-### 14. **Sanitización de Datos**
-- **Problema**: Datos del Excel van directos a la IA
-- **Solución**: Sanitizar y validar contenido antes de procesar
-- **Impacto**: Alto - Seguridad
-- **Prioridad**: ALTA
+### 14. **Sanitización de Datos** ✅
+- **Estado**: COMPLETADO
+- **Solución implementada**: Conversión segura a tipos, validación de rangos
+- **Mejoras**: Protección contra valores maliciosos
 
 ## 📱 Mejoras Técnicas Menores
 
@@ -113,25 +133,31 @@
 
 ## 🎯 Roadmap de Implementación
 
-### Sprint 1 - Fixes Críticos (Esta semana)
-1. Arreglar procesamiento CSV → JSON
-2. Implementar validación básica de datos
-3. Mejorar manejo de errores API
+### ✅ Sprint 1 - Fixes Críticos (COMPLETADO)
+1. ✅ Procesamiento CSV → JSON estructurado
+2. ✅ Validación completa de datos
+3. ✅ Manejo de errores específicos
+4. ✅ Validación de archivos y seguridad
+5. ✅ Gestión de API key con validación
+6. ✅ Prompt optimizado para coleccionistas
+7. ✅ Feedback visual mejorado
 
-### Sprint 2 - Estabilidad (Próxima semana)  
-4. Validación de archivos y seguridad
-5. Gestión adecuada de API key
-6. Testing básico
+### 🔥 Sprint 2 - eBay Integration (EN DESARROLLO)
+1. **Integración eBay Finding API**
+2. **Búsqueda automática de ofertas**
+3. **Enlaces directos desde recomendaciones**
+4. **Filtros por condición (CIB/Loose/New)**
 
-### Sprint 3 - UX (Siguiente)
-7. Responsividad móvil
-8. Validación entrada manual
-9. Feedback visual mejorado
+### Sprint 3 - Alertas y Notificaciones
+5. Sistema de alertas de precio
+6. Web Push notifications  
+7. Comparador multi-marketplace
 
-### Sprint 4 - Features (Futuro)
-10. Exportar resultados
-11. Historial de análisis
-12. Funcionalidades avanzadas
+### Sprint 4 - Features Avanzadas
+8. Responsividad móvil
+9. Exportar resultados (PDF/Excel)
+10. Historial de análisis
+11. Comparación de colecciones
 
 ## 📋 Notas Técnicas
 
@@ -143,5 +169,20 @@
 
 ---
 
+## 🎖️ Estado Actual del Proyecto
+
+**Sprint 1 (Críticos): ✅ COMPLETADO AL 100%**
+- Procesamiento de datos robusto
+- Validación completa 
+- Manejo de errores específicos
+- Prompt coleccionista optimizado
+- UX de carga mejorada
+
+**Próximo Hito: Integración eBay API**
+- Convertir recomendaciones "COMPRAR" en enlaces reales
+- Búsqueda automática de ofertas por debajo del precio objetivo
+- Funcionalidad única en el mercado de análisis de colecciones
+
 *Documento creado: 2025-01-20*
-*Última actualización: 2025-01-20*
+*Última actualización: 2025-08-25*
+*Estado: Sprint 1 completado - Iniciando Sprint 2 (eBay)*
